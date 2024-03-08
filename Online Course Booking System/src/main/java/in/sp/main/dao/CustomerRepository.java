@@ -14,5 +14,8 @@ public interface CustomerRepository extends JpaRepository<CustomerEnq,Integer>
 {
 	@Query("SELECT intrestedcourse, COUNT(status) FROM  CustomerEnq GROUP BY intrestedcourse")
 	public List<Object[]> countByPurchasedCourse();
+	
+	@Query("DELETE FROM CustomerEnq WHERE status='0' ")
+	public boolean deleteNotPurchesedCustomer();
 }
 

@@ -1,6 +1,5 @@
 package in.sp.main.controllers;
 
-import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -70,8 +69,8 @@ public class CustomerEnqController
 		model.addAttribute("listCustomer", list);
 		return "customerfollowup";
 	}
-
 	
+			
 	@GetMapping("/saleCourse")
 	public String openEmpHome(Model model)
 	{
@@ -80,4 +79,20 @@ public class CustomerEnqController
 		
 		return "salecourse";
 	}
+	
+
+	@GetMapping("/purchasedCustomer")
+	public String coursePurchasedPage(Model model)
+	{
+		String pageString="";
+		
+		boolean b=service.notPurchesedCustomer();
+		System.out.println(b);
+			List<CustomerEnq> list=service.getAllCustomer();
+			model.addAttribute("listCustomer", list);
+			
+			return pageString="customer_page";
+		
+	}		
+	
 }

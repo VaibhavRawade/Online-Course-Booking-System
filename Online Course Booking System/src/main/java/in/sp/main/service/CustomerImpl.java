@@ -54,4 +54,21 @@ public class CustomerImpl implements CustomerInterface
 		 List<Object[]> list=dao.countByPurchasedCourse();
 	   	return list;
 	}
+
+
+	@Override
+	public boolean notPurchesedCustomer()
+	{
+		boolean b=false;
+		try 
+		{
+			b=dao.deleteNotPurchesedCustomer();
+			b=true;
+		} 
+		catch (Exception e) 
+		{
+			e.printStackTrace();
+		}
+		return b;
+	}
 }

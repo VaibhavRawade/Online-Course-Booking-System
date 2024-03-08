@@ -18,11 +18,11 @@
   <body>
 		 	<jsp:include page="admin-header.jsp"/>
 		 	
-		 	<% 
-		 	String str=(String)request.getAttribute("error");
-		 	if(str!=null)
-		 	{
-		 		%>
+		 	<%
+		 			 	String str=(String)request.getAttribute("error");
+		 			 			 	if(str!=null)
+		 			 			 	{
+		 			 	%>
 				<div class="EmpAddHeader">
 					<div class="alert alert-danger container" role="alert">
 						<div class="row">
@@ -32,9 +32,9 @@
 					  	</div>
 				 	</div>
 			 	</div>
-			 	<% 
-		 	} 	
-			%>
+			 	<%
+			 	}
+			 	%>
 		 	
 		     <br/><br/> 	
 		     <div class="container mt-3">
@@ -49,10 +49,10 @@
 						          <th>Delete</th>
 						       </tr>  
 					      <%
-							ArrayList<Employee> users = (ArrayList<Employee>) request.getAttribute("emplist");
-							for (Employee user: users) 
-							{
-						       %>
+  					      ArrayList<Student> users = (ArrayList<Student>) request.getAttribute("emplist");
+  					        					      					for (Student user: users) 
+  					        					      					{
+  					      %>
 						       <tr>
 								    <td><%= user.getName() %></td>
 								    <td><%= user.getEmail() %></td>

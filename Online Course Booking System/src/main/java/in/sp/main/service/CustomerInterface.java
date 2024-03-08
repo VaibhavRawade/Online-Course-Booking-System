@@ -11,4 +11,7 @@ public interface CustomerInterface
 	public List<CustomerEnq> getAllCustomer();
 	
 	public List<Object[]> getPurchasedCourseCountService();
+	
+	
+	public boolean notPurchesedCustomer();
 }

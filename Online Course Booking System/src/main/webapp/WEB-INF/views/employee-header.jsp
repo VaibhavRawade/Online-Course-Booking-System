@@ -48,6 +48,9 @@
 		                        <li class="nav-item dropdown">
 		                            <a class="nav-link dropdown-toggle" href="customerfollowUp">Customer Follow Up's</a>
 		                        </li>
+		                         <li class="nav-item dropdown">
+		                            <a class="nav-link dropdown-toggle" href="purchasedCustomer">Course Purchesed Customer</a>
+		                        </li>
 		                          <li class="nav-item dropdown">
 		                            <a class="nav-link dropdown-toggle" href="saleCourse">Sale Course</a>
 		                        </li>
